@@ -6,7 +6,6 @@ import (
 	"sistem-pembiayaan/app/models"
 	"strings"
 	"strconv"
-	"fmt"
 )
 
 type CalculatorService interface {
