@@ -12,6 +12,7 @@ func Router() {
 	router := mux.NewRouter()
 	r := router.PathPrefix("/v1").Subrouter()
 	r.HandleFunc("/calculate-installments", controllers.CalculatorInstallments).Methods("POST")
+	r.HandleFunc("/submit-financing", controllers.StoreInstallments).Methods("POST")
 
 	log.Println("Server starting on port 8080...")
 	log.Fatal(http.ListenAndServe(":8080", r))
